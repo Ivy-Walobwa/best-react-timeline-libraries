@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  const [key, setKey] = useState('timeline1');
+
+  return <Tabs
+    id="controlled-timeline-tab"
+    activeKey={key}
+    onSelect={(k) => setKey(k)}
+    className="mb-3"
+  >
+    <Tab eventKey="timeline1" title="Timeline 1">
+
+    </Tab>
+    <Tab eventKey="timeline2" title="Timeline 2">
+
+    </Tab>
+    <Tab eventKey="timeline3" title="Timeline 3">
+    </Tab>
+  </Tabs>
 }
 
 export default App;
