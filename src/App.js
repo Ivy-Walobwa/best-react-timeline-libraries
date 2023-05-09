@@ -3,6 +3,8 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { ReactChronoComponent } from './components';
+
 const App = () => {
   const [key, setKey] = useState('timeline1');
 
@@ -12,8 +14,8 @@ const App = () => {
     onSelect={(k) => setKey(k)}
     className="mb-3"
   >
-    <Tab eventKey="timeline1" title="Timeline 1">
-
+    <Tab eventKey="timeline1" title="React Chrono">
+      <ReactChronoComponent />
     </Tab>
     <Tab eventKey="timeline2" title="Timeline 2">
 
