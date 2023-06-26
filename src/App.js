@@ -3,7 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { ReactChronoComponent, ReactVerticalTimelineComponent } from './components';
+import { ReactChronoComponent, ReactVerticalTimelineComponent, FrappeGantt } from './components';
 
 const App = () => {
   const [key, setKey] = useState('timeline1');
@@ -20,7 +20,8 @@ const App = () => {
     <Tab eventKey="timeline2" title="React Vertical Timeline ">
       <ReactVerticalTimelineComponent />
     </Tab>
-    <Tab eventKey="timeline3" title="Timeline 3">
+    <Tab eventKey="timeline3" title="Frappe Gantt">
+      <FrappeGantt />
     </Tab>
   </Tabs>
 }

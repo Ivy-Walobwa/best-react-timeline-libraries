@@ -11,3 +11,18 @@ export const ReactChronoDataMap = (data) => {
 
     })
 }
+
+export const FrappeGanttDataMap = (data) => {
+
+    return data.map(el => {
+        return {
+            id: `Task ${el.id}`,
+            name: el.company,
+            start: el.start,
+            end: el.end,
+            progress: Math.floor(Math.random() * 101),
+            dependencies:el.dependencies
+        }
+
+    })
+}
